@@ -3,15 +3,15 @@ import "./App.css";
 import "./Text.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-import About from './components/About';
+// import About from './components/About';
 import React, { useState } from "react";
 import Alert from "./components/Alert";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 function App() {
   /**************** Toggle Display Mode ***************/
@@ -54,26 +54,28 @@ function App() {
 
   return (
     <>
-    <Router>
+    
       {/* Navbar */}
-      <Navbar title="Textutils" mode={mode} toggleMode={toggleMode} />
+      <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
 
       {/* Alert */}
       <Alert alert={alert} />
 
       {/* Text area */}
-      
-      <div className="container my-3">
+
+    {/* Routing to About Page */}
+    {/* <Router> */}
+      {/* <div className="container my-3">
         <Switch>
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/">
+          <Route exact path="/">*/}
           <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
-          </Route>
+          {/*</Route>
         </Switch>
       </div>
-      </Router>
+      </Router> */}
       {/* <About/> */}
     </>
   );

@@ -50,7 +50,7 @@ export default function TextForm(props) {
   // setText ("new Text"); // Correct way to change the state
   return (
     <>
-      document.title = 'textUtils -Home';
+      {/* document.title = 'textUtils -Home'; */}
 
     <div className="container" style={{color: props.mode==='dark'?'white':'black'}}
 >
